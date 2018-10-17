@@ -14,33 +14,33 @@
     <context:component-scan base-package="com"/>
     <mvc:annotation-driven/>
 
-    <bean id="sessionFactory"
-          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="configLocation">
-            <value>classpath:hibernate.cfg.xml</value>
-        </property>
-        <property name="dataSource">
-            <ref bean="dataSource"/>
-        </property>
-    </bean>
+    <!--<bean id="sessionFactory"-->
+          <!--class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">-->
+        <!--<property name="configLocation">-->
+            <!--<value>classpath:hibernate.cfg.xml</value>-->
+        <!--</property>-->
+        <!--<property name="dataSource">-->
+            <!--<ref bean="dataSource"/>-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
-        <property name="driver">
-            <value>com.mysql.jdbc.Driver</value>
-        </property>
-        <property name="driverUrl">
-            <value>jdbc:mysql://localhost:3306/thanos?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8</value>
-        </property>
-        <property name="user">
-            <value>root</value>
-        </property>
-        <property name="password">
-            <value>9009</value>
-        </property>
-    </bean>
+    <!--<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">-->
+        <!--<property name="driver">-->
+            <!--<value>com.mysql.jdbc.Driver</value>-->
+        <!--</property>-->
+        <!--<property name="driverUrl">-->
+            <!--<value>jdbc:mysql://localhost:3306/thanos?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8</value>-->
+        <!--</property>-->
+        <!--<property name="user">-->
+            <!--<value>root</value>-->
+        <!--</property>-->
+        <!--<property name="password">-->
+            <!--<value>9009</value>-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
+    <!--<bean id="transactionManager"-->
+          <!--class="org.springframework.orm.hibernate4.HibernateTransactionManager">-->
+        <!--<property name="sessionFactory" ref="sessionFactory"/>-->
+    <!--</bean>-->
 </beans>
