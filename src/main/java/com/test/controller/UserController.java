@@ -18,8 +18,8 @@ import java.util.List;
 @RequestMapping("/test")//Contoller下所有接口统一入口
 public class UserController {
 
-//    @Autowired
-//    private UserService userService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/user")
     @ResponseBody
@@ -28,9 +28,9 @@ public class UserController {
         return dao.query();
     }
 
-//    @RequestMapping("/user1")
-//    @ResponseBody
-//    public List<User> getUser1() {
-//        return userService.search();
-//    }
+    @RequestMapping("/user1")
+    @ResponseBody
+    public List<User> getUser1() {
+        return userService.search();
+    }
 }
