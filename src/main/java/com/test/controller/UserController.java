@@ -18,15 +18,19 @@ import java.util.List;
 @RequestMapping("/test")//Contoller下所有接口统一入口
 public class UserController {
 
-//    @Autowired
-//    private UserService userService;
+    @Autowired
+    private UserService userService;
 
-    //映射一个action
     @RequestMapping("/user")
-    @ResponseBody//表示直接输出返回内容，不进行jsp或html跳转，本例是为了写接口，这里直接返回json
+    @ResponseBody
     public List<User> getUser() {
         UserDao dao = new UserDao();
-        //创建一个UserEntity，直接返回，之前在web.xml中配置的jackson会将user对象转为json输出
         return dao.query();
+    }
+
+    @RequestMapping("/user1")
+    @ResponseBody
+    public List<User> getUser1() {
+        return userService.search();
     }
 }
