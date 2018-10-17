@@ -13,7 +13,7 @@ import java.util.List;
  * @author Thanos Yu
  * @date 10/9/2018 1:31 PM
  */
-public class ModelSensorDao {
+public class UserDao {
 
     public List<User> query() {
         Session session = null;
