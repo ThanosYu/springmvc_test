@@ -9,6 +9,9 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "user")
+@NamedQueries({
+        @NamedQuery(name = "User.all", query = "from User")
+})
 public class User implements Serializable{
 
     /**
