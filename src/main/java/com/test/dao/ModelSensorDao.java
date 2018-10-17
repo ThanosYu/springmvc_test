@@ -1,6 +1,6 @@
 package com.test.dao;
 
-import com.test.entity.ModelSensorEntity;
+import com.test.model.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -15,9 +15,9 @@ import java.util.List;
  */
 public class ModelSensorDao {
 
-    public List<ModelSensorEntity> query() {
+    public List<User> query() {
         Session session = null;
-        List<ModelSensorEntity> list = null;
+        List<User> list = null;
         try {
             //实例化Configuration，这行代码默认加载hibernate.cfg.xml文件
             Configuration conf = new Configuration().configure();
@@ -25,7 +25,7 @@ public class ModelSensorDao {
             SessionFactory sf = conf.buildSessionFactory();
             //实例化Session
             session = sf.openSession();
-            String hql = "from ModelSensorEntity ";
+            String hql = "from User ";
             Query query = session.createQuery(hql);
             list = query.list();
         } catch (HibernateException e) {
