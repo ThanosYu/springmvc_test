@@ -20,8 +20,6 @@
         <!-- 指定自动生成数据表的策略 -->
         <property name="hbm2ddl.auto">update</property>
         <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
-        <property name="hibernate.connection.release_mode">after_transaction</property>
-
         <mapping class="com.test.model.User"/>
 
     </session-factory>
