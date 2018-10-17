@@ -15,7 +15,7 @@ import java.util.List;
  * @date 10/9/2018 11:49 AM
  */
 @Controller
-@RequestMapping("/test")//Contoller下所有接口统一入口
+@RequestMapping("/test")
 public class UserController {
 
     @Autowired
@@ -31,6 +31,11 @@ public class UserController {
     @RequestMapping("/user1")
     @ResponseBody
     public List<User> getUser1() {
-        return userService.search();
+        List<User> list = userService.search();
+        System.out.println("---------------size: "+list.size());
+        System.out.println(list.get(0).getId());
+        System.out.println(list.get(0).getName());
+        System.out.println(list.get(0).getPassword());
+        return list;
     }
 }
